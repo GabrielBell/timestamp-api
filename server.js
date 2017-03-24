@@ -14,9 +14,9 @@ app.get('/app', function(req,res){
     
     var url= parse(req.url)
     console.log(url);
-    res.send("Finished")
+    res.sendFile(path.join(__dirname,'/landing.html'))
     
-})
+});
 
 app.listen(process.env.PORT, function(){
     console.log("app running on port 8080")
