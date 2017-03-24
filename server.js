@@ -12,7 +12,7 @@ app.get('/api', function(req,res){
     
     var url= parse(req.url)
     console.log(url);
-    res.sendFile(path.join(__dirname,'/landing.html'))
+    res.json(url)
 });
 
 app.get('*', function(req,res){
