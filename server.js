@@ -33,7 +33,9 @@ function url2Time(url){
     var timeStr= url.query
     var timeForm= timeStr.replace(/[^A-Za-z0-9/-:]+/g, " ");
     var numOnly= /^\d+$/.test(timeForm);
-    if(numOnly) return new Date(Number(timeForm))
+    if(numOnly){
+        return new Date(Number(timeForm))
+    } 
     
     if(isNaN(Date.parse(timeForm))){
         return null
